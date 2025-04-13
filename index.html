@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prashant Kumar | Technical Lead</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&family=Space+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Inter:wght@300;500;700&family=Space+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <nav class="nav">
+      <div class="container">
+        <a href="#" class="logo">P</a>
+        <ul class="nav-items">
+          <li><a href="#skills" class="nav-link">Expertise</a></li>
+          <li><a href="#experience" class="nav-link">Experience</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <section class="hero">
+      <div class="container">
+        <h1>Building Scalable Web Experiences</h1>
+        <p>
+          Technical Leader & Full-Stack Engineer<br />
+          <span style="color: #7a7a7a; font-size: 1.1rem"
+            >Crafting high-performance solutions at scale</span
+          >
+        </p>
+
+        <div class="cta-container">
+          <a href="#contact" class="cta-button">Start Collaboration →</a>
+          <a
+            href="path/to/your-resume.pdf"
+            download="Prashant-Kumar-Resume.pdf"
+            class="cta-button secondary"
+          >
+            <i class="fas fa-file-download"></i> Download Resume
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="skills-grid container" id="skills">
+      <div class="skill-card">
+        <i class="fas fa-users skill-icon"></i>
+        <h3>Technical Leadership</h3>
+        <ul class="skill-list">
+          <li>Team Mentorship</li>
+          <li>Strategic Roadmapping</li>
+          <li>Code Quality Evangelist</li>
+          <li>Cross-functional Leadership</li>
+        </ul>
+      </div>
+
+      <div class="skill-card">
+        <i class="fas fa-code skill-icon"></i>
+        <h3>Frontend Architecture</h3>
+        <ul class="skill-list">
+          <li>Angular Ecosystem Expert</li>
+          <li>React Performance Optimization</li>
+          <li>TypeScript Development</li>
+          <li>Core JavaScript Expertise</li>
+        </ul>
+      </div>
+
+      <div class="skill-card">
+        <i class="fab fa-node skill-icon"></i>
+        <h3>Backend Development</h3>
+        <ul class="skill-list">
+          <li>Node.js Microservices</li>
+          <li>High-throughput APIs</li>
+          <li>System Architecture Design</li>
+          <li>Database Optimization</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="experience-section container" id="experience">
+      <h2 style="font-size: 2rem; margin-bottom: 3rem; text-align: center">
+        Professional Journey
+      </h2>
+      <div class="experience-grid">
+        <div class="experience-card">
+          <div class="experience-header">
+            <span class="company">Cloudflight</span>
+            <span class="duration">February 2025 - Present</span>
+          </div>
+          <p class="role">Frontend Software Engineer (Lead Frontend)</p>
+          <ul class="achievements">
+            <li>
+              Contributed to the development of Dealer selection feature within
+              Spartacus storefront
+            </li>
+            <li>
+              Improved page load time by 40% through efficient Spartacus
+              development practices
+            </li>
+            <li>
+              Utilized and extended Spartacus services to consume backend API's
+            </li>
+            <li>
+              Participated in code reviews and ensured adherence to coding
+              standards within the Angular/Spartacus codebase
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="read-more-section">
+        <a href="#full-experience" class="read-more-btn">
+          View Full Experience →
+        </a>
+      </div>
+    </section>
+
+    <footer>
+      <div class="branding">
+        <div class="container">
+          <a href="#" class="logo">P</a>
+          <p style="margin-top: 1.5rem; color: #7a7a7a">
+            © <span id="current-year"></span> Prashant Kumar. All rights
+            reserved.
+          </p>
+        </div>
+      </div>
+      <div class="contact-cta" id="contact">
+        <div class="container">
+          <h2>Let's Build Exceptional Software</h2>
+          <p style="margin: 1.5rem 0 3rem; color: #9e9e9e">
+            Ready to elevate your technical initiatives?
+          </p>
+          <a href="mailto:contact@example.com" class="cta-button"
+            >Schedule Consultation</a
+          >
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Magnetic button effect
+      document.querySelectorAll(".cta-button").forEach((button) => {
+        button.addEventListener("mousemove", (e) => {
+          const rect = button.getBoundingClientRect();
+          const x = (e.clientX - rect.left) / rect.width - 0.5;
+          const y = (e.clientY - rect.top) / rect.height - 0.5;
+
+          button.style.transform = `scale(1.05) translate(${x * 10}px, ${
+            y * 10
+          }px)`;
+        });
+
+        button.addEventListener("mouseleave", () => {
+          button.style.transform = "scale(1)";
+        });
+      });
+
+      document.getElementById("current-year").textContent =
+        new Date().getFullYear();
+    </script>
+  </body>
+</html>
